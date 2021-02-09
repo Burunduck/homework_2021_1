@@ -9,13 +9,13 @@ function chess(n) {
     /** @constant {string}
      * @description Char for white color cell
      */
-    const white = ' ';
+    const WHITE = ' ';
 
     /**
      * @constant {string}
      * @description Char for black color cell
      */
-    const black = '*';
+    const BLACK = '*';
 
     /**
      * @description If true - means that last cell color was black, else last cell color was white
@@ -35,7 +35,7 @@ function chess(n) {
      */
     let addLine = (currentCell) => {
         for (let j = 0; j < n; j++) {
-            board += currentCell ? black : white;
+            board += currentCell ? BLACK : WHITE;
             currentCell = !currentCell;
         }
         return board + '\n';
