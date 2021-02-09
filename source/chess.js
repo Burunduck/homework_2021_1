@@ -1,6 +1,12 @@
 'use strict';
 
-function chess(n) {
+
+/**
+ * @description Generetae chess NxN board at string format
+ * @param {number} Amount rows and columns
+ * @returns {string} Chess board
+ */
+const chess (n) => {
 
     if (n <= 1) {
         return null;
@@ -33,7 +39,7 @@ function chess(n) {
      * @param {boolean} currentCell - From what color cell new line have to start.
      * @returns {string} chess board with new line
      */
-    let addLine = (currentCell) => {
+    const addLine = (currentCell) => {
         for (let j = 0; j < n; j++) {
             board += currentCell ? BLACK : WHITE;
             currentCell = !currentCell;
@@ -45,5 +51,6 @@ function chess(n) {
         board = addLine(currentCell);
         currentCell = !currentCell;
     }
+
     return board;
 }
