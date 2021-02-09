@@ -6,7 +6,7 @@
  * @param {number} Amount rows and columns
  * @returns {string} Chess board
  */
-const chess (n) => {
+const chess = (n) => {
 
     if (n <= 1) {
         return null;
